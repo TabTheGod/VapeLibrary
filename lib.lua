@@ -10,7 +10,7 @@ local CloseBind = Enum.KeyCode.RightControl
 local ui = Instance.new("ScreenGui")
 syn.protect_gui(ui)
 ui:Protect(true)
-ui.Name = "ui"
+ui.Name = "Reach Net"
 ui.Parent = game.CoreGui
 ui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
@@ -113,7 +113,7 @@ function lib:Window(text, preset, closebind)
     TabHold.Parent = Main
     TabHold.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     TabHold.BackgroundTransparency = 1.000
-    TabHold.Position = UDim2.new(0.0339285731, 0, 0.147335425, 0)
+    TabHold.Position = UDim2.new(0.0229285731, 0, 0.147335425, 0)
     TabHold.Size = UDim2.new(0, 107, 0, 254)
 
     TabHoldLayout.Name = "TabHoldLayout"
