@@ -4,7 +4,7 @@ local TweenService = game:GetService("TweenService")
 local RunService = game:GetService("RunService")
 local LocalPlayer = game:GetService("Players").LocalPlayer
 local Mouse = LocalPlayer:GetMouse()
-local PresetColor = Color3.fromRGB(70, 150, 200)
+local PresetColor = Color3.fromRGB(70, 150, 210)
 local CloseBind = Enum.KeyCode.RightControl
 
 local ui = Instance.new("ScreenGui")
@@ -141,7 +141,7 @@ function lib:Window(text, preset, closebind)
     TitleT.Parent = Main
     TitleT.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     TitleT.BackgroundTransparency = 1.000
-    TitleT.Position = UDim2.new(0.0539285731, 0, 0.0564263314, 0)
+    TitleT.Position = UDim2.new(0.0459285731, 0, 0.0564263314, 0)
     TitleT.Size = UDim2.new(0, 200, 0, 23)
     TitleT.Font = Enum.Font.GothamSemibold
     TitleT.Text = Net
