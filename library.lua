@@ -95,7 +95,6 @@ function lib:Window(text, preset, closebind)
     local TabHold = Instance.new("Frame")
     local TabHoldLayout = Instance.new("UIListLayout")
     local Title = Instance.new("TextLabel")
-    local TitleT = Instance.new("TextLabel")
     local TabFolder = Instance.new("Folder")
     local DragFrame = Instance.new("Frame")
 
@@ -130,7 +129,7 @@ function lib:Window(text, preset, closebind)
     Title.Font = Enum.Font.GothamSemibold
     Title.Text = text
     Title.RichText = true
-    Title.TextColor3 = Color3.fromRGB(150,150,150)
+    Title.TextColor3 = Color3.fromRGB(68, 68, 68)
     Title.TextSize = 12.000
     Title.TextXAlignment = Enum.TextXAlignment.Left
     
