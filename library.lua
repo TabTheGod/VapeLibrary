@@ -128,7 +128,7 @@ function lib:Window(text, preset, closebind)
     Title.Position = UDim2.new(0.0339285731, 0, 0.0564263314, 0)
     Title.Size = UDim2.new(0, 200, 0, 23)
     Title.Font = Enum.Font.GothamSemibold
-    Title.Text = Reach
+    Title.Text = text
     Title.RichText = true
     Title.TextColor3 = Color3.fromRGB(150,150,150)
     Title.TextSize = 12.000
