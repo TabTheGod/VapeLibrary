@@ -10,7 +10,7 @@ local CloseBind = Enum.KeyCode.RightControl
 local ui = Instance.new("ScreenGui")
 syn.protect_gui(ui)
 ui:Protect(true)
-ui.Name = "Reach Net"
+ui.Name = "EXODUS"
 ui.Parent = game.CoreGui
 ui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
@@ -129,7 +129,7 @@ function lib:Window(text, preset, closebind)
     Title.Font = Enum.Font.GothamSemibold
     Title.Text = text
     Title.RichText = true
-    Title.TextColor3 = Color3.fromRGB(150,150,150)
+    Title.TextColor3 = Color3.fromRGB(255,255,255)
     Title.TextSize = 12.000
     Title.TextXAlignment = Enum.TextXAlignment.Left
     
