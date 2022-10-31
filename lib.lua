@@ -121,9 +121,6 @@ function lib:Window(text, preset, closebind)
     TabHoldLayout.SortOrder = Enum.SortOrder.LayoutOrder
     TabHoldLayout.Padding = UDim.new(0, 11)
 
-    Reach = string.split(text, " ")[1]
-    Net = string.split(text, " ")[2]
-
     Title.Name = "Title"
     Title.Parent = Main
     Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -133,22 +130,10 @@ function lib:Window(text, preset, closebind)
     Title.Font = Enum.Font.GothamSemibold
     Title.Text = Reach
     Title.RichText = true
-    Title.TextColor3 = Color3.fromRGB(255,255,255)
+    Title.TextColor3 = Color3.fromRGB(150,150,150)
     Title.TextSize = 12.000
     Title.TextXAlignment = Enum.TextXAlignment.Left
-
-    TitleT.Name = "Title"
-    TitleT.Parent = Main
-    TitleT.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    TitleT.BackgroundTransparency = 1.000
-    TitleT.Position = UDim2.new(0.0000000000005285731, 0, 0.0564263314, 0)
-    TitleT.Size = UDim2.new(0, 200, 0, 23)
-    TitleT.Font = Enum.Font.GothamSemibold
-    TitleT.Text = Net
-    TitleT.RichText = true
-    TitleT.TextColor3 = PresetColor
-    TitleT.TextSize = 12.000
-
+    
     DragFrame.Name = "DragFrame"
     DragFrame.Parent = Main
     DragFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
