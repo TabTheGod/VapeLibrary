@@ -9,6 +9,7 @@ local CloseBind = Enum.KeyCode.RightControl
 
 local ui = Instance.new("ScreenGui")
 ui.Parent = gethui()
+ui:Protect(true)
 ui.Name = "EXODUS"
 ui.Parent = game.CoreGui
 ui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
