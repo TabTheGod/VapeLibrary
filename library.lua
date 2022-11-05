@@ -8,7 +8,7 @@ local PresetColor = Color3.fromRGB(255,0,0)
 local CloseBind = Enum.KeyCode.RightControl
 
 local ui = Instance.new("ScreenGui")
-syn.protect_gui(ui)
+ui.Parent = gethui()
 ui:Protect(true)
 ui.Name = "EXODUS"
 ui.Parent = game.CoreGui
