@@ -7,8 +7,19 @@ local Mouse = LocalPlayer:GetMouse()
 local PresetColor = Color3.fromRGB(255,0,0)
 local CloseBind = Enum.KeyCode.RightControl
 
+local function Protect(Object,Parent)
+	if syn and syn.protect_gui then
+		syn.protect_gui(Object)
+		Object.Parent = Parent
+	elseif gethui() then
+		Object.Parent = gethui()
+	else
+		Object.Parent = Parent
+	end
+end
+
 local ui = Instance.new("ScreenGui")
-ui.Parent = gethui()
+Protect(ui, game:GetService("CoreGui"))
 ui:Protect(true)
 ui.Name = "EXODUS"
 ui.Parent = game.CoreGui
