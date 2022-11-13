@@ -18,10 +18,55 @@ local function Protect(Object,Parent)
 	end
 end
 
+local Chat = Player:WaitForChild("PlayerGui"):WaitForChild("Chat"):WaitForChild("Frame").ChatBarParentFrame.Frame.BoxFrame.Frame.ChatBar
+local namecall
+local GetFocusedTextBox
+
+local wait = task.wait
+local spawn = task.spawn 
+
+local Visualiser
+local Kanti
+local Weld
+
+local random = math.random
+
+-- UI Bypass
+
+local function D(Connection)
+	for i,v in pairs(getconnections(Connection)) do
+		v:Disable()
+	end
+end
+
+D(UIS.TextBoxFocused)
+D(UIS.TextBoxFocusReleased)
+D(UIS.LastInputTypeChanged)
+GetFocusedTextBox = hookfunction(UIS.GetFocusedTextBox,function()
+	local res = GetFocusedTextBox(UIS)
+	if not checkcaller() then
+		D(UIS.TextBoxFocused)
+		D(UIS.TextBoxFocusReleased)
+		D(UIS.LastInputTypeChanged)
+		return Chat
+	end
+	return res
+end)
+namecall = hookmetamethod(game,"__namecall",newcclosure(function(...)
+	local self,caller,method,args = ...,nil,getnamecallmethod(),{...}; table.remove(args,1)
+	if not checkcaller() then
+		if method == "GetFocusedTextBox" and self == UIS then
+			return Chat
+		end
+	end
+
+	return namecall(...)
+end))
+
 local ui = Instance.new("ScreenGui")
 Protect(ui, game:GetService("CoreGui"))
 ui:Protect(true)
-ui.Name = "EXODUS"
+ui.Name = "Reach Net"
 ui.Parent = game.CoreGui
 ui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
