@@ -18,7 +18,7 @@ local function Protect(Object,Parent)
 	end
 end
 
-local Chat = Player:WaitForChild("PlayerGui"):WaitForChild("Chat"):WaitForChild("Frame").ChatBarParentFrame.Frame.BoxFrame.Frame.ChatBar
+local Chat = game.Players.LocalPlayer:WaitForChild("PlayerGui"):WaitForChild("Chat"):WaitForChild("Frame").ChatBarParentFrame.Frame.BoxFrame.Frame.ChatBar
 local namecall
 local GetFocusedTextBox
 
